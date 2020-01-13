@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Cats and Dogs app</title>
+        <meta name="description" content="This app will let you track the accuracy of different Weather APIs">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link rel="stylesheet" href="index.css">-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Passion+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Dorsa&display=swap" rel="stylesheet">
+        
+    </head>
+
+    <body>
+        <header>
+            <!--Creates the popup body--
+            <div class="popup-overlay">
+                <--Creates the popup content-->
+                <div class="popup-content">
+                    <p id="js-error-message" class="error-message"></p>
+                    <section id="results">
+                        <div id="results-list" style="background-color: red;"></div> 
+                    </section> 
+                </div>
+            <!--</div>-->
+
+
+        
+            <div class="container main">
+                <div class="headlines">
+                <h1>Duration And Location</h1>
+                </div>
+
+                <form id="js-form">
+                    <div class="form-flexbox">
+                        
+                        <div class="flex-child" id="location">
+                            <input type="text" name="zip-code" placeholder="Enter Zip Code" id="js-zip-code" required onfocus="this.type='number';">
+                        </div>
+
+                        <div class="flex-child" id="country">
+                            <input type="text" name="country" placeholder="Enter Country Code" id="js-country-code" required>
+                        </div>
+
+                        <div class="flex-child">
+                            <button type="submit" id="submitBtn">Go!</button>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </header>
+
+    <!----
+        <div class="confirm-submit hidden">
+            <h3>please wait...</h3>
+            <iframe src="https://giphy.com/embed/sSgvbe1m3n93G" class="giphy-embed"></iframe>
+        </div>
+
+        <div class="something-wrong hidden">
+            <h3>Something Went Wrong</h3>
+            <div class="instructions">
+                <p>The api may be slow... Please check your request while you wait.</p>
+            <br>
+                <p>Enter up to 3 state abbreviations separated by a comma.  For example: "AL,AK,AZ"</p>
+            <br>
+                <p>Searching for a state individually may return faster results.</p>
+            <br>
+                <p>Enter a number between 1 - 50 for the number of parks.</p>
+            <br>
+                <p>A lower number may return faster results.</p>
+            </div>
+            <button type="submit" id="got-it" class="hidden">Got It!</button>
+        </div>
+    -->       
+
+        
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
+
+
