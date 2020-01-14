@@ -21,7 +21,7 @@ const darkSkyBase = "https://api.darksky.net/forecast/";
          //above to get Location_Key  then:
 //const accuWeatherBase = "http://dataservice.accuweather.com/currentconditions/v1/" + Location_Key;
 
-const accuWeatherWorkingURL = "http://dataservice.accuweather.com/currentconditions/v1/26463_PC?apikey=pU3saOZ250CYJ2bcc3CCzkQZSYTn7xO9&language=en-us&details=false HTTP/1.1";
+const accuWeatherWorkingURL = "https://cors-anywhere.herokuapp.com/http://dataservice.accuweather.com/currentconditions/v1/26463_PC?apikey=pU3saOZ250CYJ2bcc3CCzkQZSYTn7xO9&language=en-us&details=false HTTP/1.1";
 
 
 
