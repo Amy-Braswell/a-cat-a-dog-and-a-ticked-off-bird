@@ -21,7 +21,7 @@ const darkSkyBase = "https://api.darksky.net/forecast/";
          //above to get Location_Key  then:
 //const accuWeatherBase = "http://dataservice.accuweather.com/currentconditions/v1/" + Location_Key;
 
-const accuWeatherWorkingURL = "https://cors-anywhere.herokuapp.com/http://dataservice.accuweather.com/currentconditions/v1/26463_PC?apikey=pU3saOZ250CYJ2bcc3CCzkQZSYTn7xO9&language=en-us&details=false HTTP/1.1";
+//const accuWeatherWorkingURL = "http://dataservice.accuweather.com/currentconditions/v1/26463_PC?apikey=pU3saOZ250CYJ2bcc3CCzkQZSYTn7xO9&language=en-us&details=false HTTP/1.1";
 
 
 
@@ -43,8 +43,35 @@ const accuWeatherWorkingURL = "https://cors-anywhere.herokuapp.com/http://datase
 */
 
 
-//////////////// Watch User Form //////////////////////
+$(document).ready(function() { 
 
+  var proxy = 'https://cors-anywhere.herokuapp.com/';
+  var apiLinkDS = "https://api.darksky.net/forecast/05cb46aa19287b7b9c1a235035e4c45f/38,-122";
+
+  $.ajax({
+    url: proxy + apiLinkDS,
+    success:function(data) { console.log(data);}
+  });
+
+}); 
+
+$(document).ready(function() { 
+
+  var proxy = 'https://cors-anywhere.herokuapp.com/';
+  var apiLinkDS = "http://dataservice.accuweather.com/currentconditions/v1/26463_PC?apikey=pU3saOZ250CYJ2bcc3CCzkQZSYTn7xO9&language=en-us&details=false HTTP/1.1";
+
+  $.ajax({
+    url: proxy + apiLinkDS,
+    success:function(data) { console.log(data);}
+  });
+
+}); 
+
+
+
+
+//////////////// Watch User Form //////////////////////
+/*
 function watchUserForm() {
     $('form').submit(event => {
         event.preventDefault(); 
@@ -85,9 +112,12 @@ function watchUserForm() {
 
 
 
+
+
         
         //pass weather api url into fetch command
-        fetch(accuWeatherWorkingURL)
+        fetch(darkSkyURL, {
+            mode: 'no-cors'})
         .then(response => {
           if (response.ok) {
           return response.json();
@@ -111,7 +141,7 @@ function watchUserForm() {
 
     $(watchUserForm);
 
-
+*/
 
 
 
