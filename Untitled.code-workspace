@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "/Users/Thrace/Projects/NatlPark_API"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}
