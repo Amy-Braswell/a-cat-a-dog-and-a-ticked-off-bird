@@ -120,8 +120,10 @@ function watchUserForm () {
 /********* Render Weather Report ***********/
 
 function renderCatResult (catSummary, catTemp, catApparent) {
+  $(".js-popup-overlay, .js-popup-content").addClass("active")
   $('#js-cat-results').prepend(
     `
+    <button id="close-button" class="close hidden"><span>close</span><i class="fa fa-times"></i></button>
       <div class="js-dark-sky">
         <h2>The cat says:</h2>
         <p>${catSummary}</p>
@@ -130,6 +132,16 @@ function renderCatResult (catSummary, catTemp, catApparent) {
       </div> 
     `
   )
+  
+  $('#close-button').removeClass('hidden')
+  closeResults()
+ 
+  function closeResults() {
+    $('#close-button').click(event => {
+      $(".js-popup-overlay, .js-popup-content").removeClass("active")
+    })
+  }
+
 }
 
 function renderDogResult (dogSummary, dogTemp, dogTempUnit) {
