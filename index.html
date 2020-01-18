@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Cats and Dogs</title>
-    <meta name="description" content="This app will let you track the accuracy of different Weather APIs">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <title>
+      Cats and Dogs
+    </title>
+    <meta content="This app will let you track the accuracy of different Weather APIs" name="description">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Passion+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Dorsa&display=swap" rel="stylesheet">
-
-</head>
-
-<body>
+  </head>
+  <body>
     <header>
-        <div class="container main">
-            <div class="headlines">
-                <h1>A Cat, a Dog, and an Irritated Bird...</h1>
-            </div>
-
-            <form id="js-form">
-                <div class="form-flexbox">
-                    <div class="flex-child" id="location">
-                        <label for="zip-code">Zip Code:</label>
-                        </br>
-                        <input type="text" name="zip-code" placeholder="Enter a US Postal Code" id="js-zip-code" required onfocus="this.type='number';" style="width:150px;">
-                    </div>
-                    <div class="flex-child">
-                        <button type="submit" id="submitBtn" style="width:100px;">Go!</button>
-                    </div>
-                </div>
-            </form>
-
-            <div class="js-popup-content">
-                <p id="js-error-message" class="js-error-message"></p>
-                <section id="js-results">
-                    <div id="js-cat-results"></div>
-                    <div id="js-dog-results"></div>
-                    <div id="js-bird-results"></div>
-                </section>
-            </div>
-
+      <div class="container main">
+        <div class="headlines">
+          <!--<h1>A Cat, a Dog, and a Ticked Off Bird...</h1> -->
         </div>
+
+        <div class="form-flexbox">
+          <div class="flex-child bird-animation">
+            <img alt="rain animation" src="images/rain-final.gif">
+          </div>
+
+          <form class="flex-child" id="js-form" name="js-form">
+            <div id="location">
+              <input id="js-zip-code" name="zip-code" onfocus="this.type='number';" placeholder=
+              "Enter a US Postal Code" required="" style="width:150px;" type="text">
+            </div>
+
+            <div>
+              <button id="submit-btn" style="width:100px;" type="submit">Go!</button>
+            </div>
+          </form>
+        </div>
+
+        <div id="js-popup-content">
+          <h2 class="hidden">Returned Results</h2>
+          <p class="js-error-message" id="js-error-message">
+          </p>
+
+          <section id="js-results">
+            <div id="js-cat-results">
+            </div>
+
+            <div id="js-dog-results">
+            </div>
+
+            <div id="js-bird-results">
+            </div>
+          </section>
+        </div>
+      </div>
     </header>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.js">
+    </script> 
+    <script src="index.js">
+    </script>
+  </body>
 </html>
