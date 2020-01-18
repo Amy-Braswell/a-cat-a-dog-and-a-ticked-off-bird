@@ -46,12 +46,14 @@ input[type=text] {
   margin-bottom: 3vh;
   padding: 10px;
   text-align: center;
+  outline: none;
 }
 
 input[type=number] {
   margin-bottom: 3vh;
   padding: 10px;
   text-align: center;
+  outline: none;
 }
 
 input[type=number]::-webkit-inner-spin-button, 
@@ -63,21 +65,22 @@ button {
   background-color: #689ad2;
   padding: 10px;
   border-radius: 10px;
+  outline: none;
   color: white;
   font-size: .8em;
 }
 
 /************ POP UP RESULTS *************/
 
-.js-popup-overlay {
+.overlay {
   visibility:hidden;
   }
   
-.js-popup-content {
+.content {
   visibility:hidden;
   }
 
-.js-popup-overlay.active{
+.overlay.active{
   visibility:visible;
   position: absolute;
   background-color: white;
@@ -87,10 +90,10 @@ button {
   left: 0;
   }
     
-.js-popup-content.active {
+.content.active {
   visibility:visible;
   width: 60%;
-  margin: 10% auto;
+  margin: 20% auto;
   }
 
 .result {
@@ -108,13 +111,16 @@ button {
   line-height: 2.5em;
   text-align: right;
   margin-right: 2%;
-  outline: none;
 }
 
 #close-button span {
   font-size: .65em;
   padding: 10px;
   color: black;
+}
+
+button:hover {
+  cursor: pointer;
 }
 
 .hidden {
