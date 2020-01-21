@@ -17,9 +17,6 @@
   <body>
     <header>
       <div class="container main">
-        <div class="headlines">
-          <!--<h1>A Cat, a Dog, and a Ticked Off Bird...</h1> -->
-        </div>
 
         <div class="form-flexbox">
           <div class="flex-child bird-animation">
@@ -42,19 +39,21 @@
       <div class="js-popup-overlay overlay">
             <!--Creates the popup content-->
         <div class="js-popup-content content">
-          <h2 class="hidden">Returned Results</h2>
           <p class="js-error-message" id="js-error-message">
           </p>
 
-          <section id="js-results">
-            <div id="js-cat-results" class="result">
-            </div>
+          <section id="js-results" class="results-flexbox">
+            <div id="js-close-button"></div>
 
-            <div id="js-dog-results" class="result">
-            </div>
+            <button id="js-cat-results" class="result">
+              <div id="js-cat-results-p"></div>
+            </button>
 
-            <div id="js-bird-results" class="result">
-            </div>
+            <button id="js-dog-results" class="result">
+            </button>
+
+            <button id="js-bird-results" class="result">
+            </button>
           </section>
         </div>
       </div>

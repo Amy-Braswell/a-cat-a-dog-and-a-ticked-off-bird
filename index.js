@@ -91,7 +91,8 @@ function watchUserForm() {
           const dogSummary = 'The current condition is ' + data[0].WeatherText.toLowerCase() + '.'
           const dogTemp = 'The current temperature is ' + data[0].Temperature.Imperial.Value
           const dogTempUnit = data[0].Temperature.Imperial.Unit + '.'
-          renderDogResult(dogSummary, dogTemp, dogTempUnit)
+          const dogPlaceholder = 'placeholder'
+          renderDogResult(dogSummary, dogTemp, dogTempUnit, dogPlaceholder)
         }
       })
     }
@@ -125,11 +126,15 @@ function watchUserForm() {
 
 function renderCatResult(catSummary, catTemp, catApparent) {
   $('.js-popup-overlay, .js-popup-content').addClass('active')
-  $('#js-cat-results').prepend(
+  $('#js-close-button').prepend(
     `
     <button id="close-button" class="close hidden"><i class="fa fa-times"></i></button>
-      <div class="dark-sky">
-        <h2>The cat says:</h2>
+    `
+  )
+  $('#js-cat-results').prepend(
+    `
+        <img src="images/cat.png" alt="cat pix">
+        <div id="js-cat-results-p">
         <p>${catSummary}</p>
         <p>${catTemp}</p>
         <p>${catApparent}</p>
@@ -139,6 +144,8 @@ function renderCatResult(catSummary, catTemp, catApparent) {
   
   $('#close-button').removeClass('hidden')
   closeResults()
+  showSource()
+
  
   function closeResults() {
     $('#close-button').click(event => {
@@ -150,13 +157,14 @@ function renderCatResult(catSummary, catTemp, catApparent) {
 
 }
 
-function renderDogResult(dogSummary, dogTemp, dogTempUnit) {
+function renderDogResult(dogSummary, dogTemp, dogTempUnit, dogPlaceholder) {
   $('#js-dog-results').append(
     `
       <div class="accuweather">
-        <h2>The dog says:</h2>
+        <img src="images/dog.png" alt="dog pix">
         <p>${dogSummary}</p>
         <p>${dogTemp} ${dogTempUnit}</p>
+        <p style="color: white;">${dogPlaceholder}</p>
       </div> 
     `
   )
@@ -166,7 +174,7 @@ function renderbirdResult(birdSummary, birdTemp, birdApparent) {
   $('#js-bird-results').append(
     `
       <div class="weatherbit">
-        <h2>The bird says:</h2>
+        <img src="images/bird.png" alt="bird pix">
         <p>${birdSummary}</p>
         <p>${birdTemp}</p>
         <p>${birdApparent}</p>
@@ -174,3 +182,48 @@ function renderbirdResult(birdSummary, birdTemp, birdApparent) {
     `
   )
 }
+
+/********* Show Weather Source ***********/
+
+function showSource() {
+  $('#js-cat-results').on("click", function() {
+    $('#js-cat-results').empty()
+  
+    $('#js-cat-results').append(
+      `
+        <button id="close-button" class="close hidden"><i class="fa fa-times"></i></button>
+        <div class="dark-sky">
+          <img src="images/cat.png" alt="cat pix">
+          <p>Go Team Dark Sky!</p>
+        </div> 
+      `
+      )
+  });
+
+  $('#js-dog-results').on("click", function() {
+    $('#js-dog-results').empty()
+
+    $('#js-dog-results').append(
+      `
+        <div class="weatherbit">
+          <img src="images/dog.png" alt="dog pix">
+          <p>Go Team AccuWeather!</p>
+        </div> 
+      `
+    )
+  });
+
+  $('#js-bird-results').on("click", function() {
+    $('#js-bird-results').empty()
+
+    $('#js-bird-results').append(
+      `
+        <div class="weatherbit">
+          <img src="images/bird.png" alt="bird pix">
+          <p>Go Team Weatherbit!</p>
+        </div> 
+      `
+    )
+  });
+}
+
