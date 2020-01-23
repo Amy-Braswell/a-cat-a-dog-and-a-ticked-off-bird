@@ -151,7 +151,13 @@ function renderCatResult(catSummary, catTemp, catApparent) {
     $('#close-button').click(event => {
       $('.js-popup-overlay, .js-popup-content').removeClass('active')
       $('.result').empty()
-      $('#js-zip-code').val(" ")
+      $('#location').empty()
+      $('#location').append(
+        `
+        <input id="js-zip-code" name="zip-code" onfocus="this.type='number';" placeholder=
+        "Enter a US Zip Code" required="" style="width:150px;" type="text">
+        `
+      )
     })
   }
 

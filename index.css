@@ -4,7 +4,6 @@
     padding: 0;
   }
 
-
 body {
     background-image: url(images/background.png);
     background-color: #d4e2f1;
@@ -28,7 +27,6 @@ body {
   height: 100%;
 }
 
-
 .bird-animation img{
   visibility: visible;
   width: 75%;
@@ -36,7 +34,6 @@ body {
   text-align: center;
   margin: 0 10%;
 }
-
 
 form {
   width: 70%;
@@ -144,60 +141,56 @@ button:hover {
   display: none;
 }
 
-
 /************** IPAD AND UP *****************/
 @media (min-width: 700px) {
 
-  .container {
-    width: 80%;
-    margin: 5vh 10%;
-    border-radius: 25px;
-    height: 90vh;
-    background-image: url(images/building.png);
-    background-color: #eee;
-    background-repeat: no-repeat;
-    background-position: bottom;
-  }
+    .container {
+      width: 80%;
+      margin: 5vh 10%;
+      border-radius: 25px;
+      height: 90vh;
+      background-image: url(images/building.png);
+      background-color: #eee;
+      background-repeat: no-repeat;
+      background-position: bottom;
+    }
 
-  .form-flexbox {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
+    .form-flexbox {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
 
-  .bird-animation {
-    margin-left: 10%;
-    margin-bottom: 5vh;
-  }
+    .bird-animation {
+      margin-left: 10%;
+      margin-bottom: 5vh;
+    }
 
+    .bird-animation img{
+      width: 70%;
+    }
 
-  .bird-animation img{
-    width: 70%;
-  }
+    .form-flexbox form {
+      margin-bottom: 10vh;
+      padding: 10vh;
+    }
 
-  .form-flexbox form {
-    margin-bottom: 10vh;
-    padding: 10vh;
-  }
+    .results-flexbox {
+      display: flex;
+      flex-direction: row;
+      align-items: top;
+    }
 
-  .results-flexbox {
-    display: flex;
-    flex-direction: row;
-    align-items: top;
-  }
+    .result {
+      width: 31%;
+      padding: 5vh 1%;
+    }
 
-  .result {
-    width: 31%;
-    padding: 5vh 1%;
-  }
-
-  .result img {
-    margin-bottom: 5vh;
-  }
-
-
+    .result img {
+      margin-bottom: 5vh;
+    }
 
 }
 
