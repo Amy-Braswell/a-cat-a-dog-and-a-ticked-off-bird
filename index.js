@@ -29,8 +29,7 @@ function watchUserForm() {
         })
         .then((myJson => {
           catCall(myJson.results[0].geometry.location.lat, myJson.results[0].geometry.location.lng)
-          const latitude = myJson.results[0].geometry.location.lat
-          const longitude = myJson.results[0].geometry.location.lng
+
         }))
         .catch(err => {
           $('#js-error-message').text(`Something went wrong: ${err.message}`)
